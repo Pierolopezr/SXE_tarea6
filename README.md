@@ -13,7 +13,12 @@ Por medio de intellij, creo el archivo `docker-compose.yml` que define los sigui
 ### Dentro del archivo `docker-compose.yml` colocamos los siguientes datos para el funcionamiento de los servicios mencionados.
 Estos datos, como lo indica el nivel uno, colocaremos un usuario y contraseña escritos. 
 Posteriormente, añadimos los puertos a cada uno, 8080 y 8081.
+Cabe resaltar. que dichos datos los tomé de distintas fuentes tales como: 
+<img width="600" height="450" alt="Captura de pantalla 2025-10-19 124101" src="https://github.com/user-attachments/assets/26f555e2-5561-43a4-bc25-3abe6da18872" />
+<img width="600" height="450" alt="Captura de pantalla 2025-10-19 124005" src="https://github.com/user-attachments/assets/823bbece-c51b-4c75-9982-20deb88989ab" />
+<img width="600" height="450" alt="Captura de pantalla 2025-10-19 123910" src="https://github.com/user-attachments/assets/b40c0e0a-05be-4585-966e-5936ef296a32" />
 
+A lo cual el .yml quedaría así: 
 ```yaml
 services:
   # Servicio de base de datos MySQL
@@ -72,35 +77,44 @@ Las variables de entorno (MYSQL_*, DB_*, PMA_*) están definidas directamente en
 Para iniciar todos los servicios, se ejecuta:
 'docker-compose up'
 
-Se recomienda no usar -d para ver los logs en tiempo real y detectar errores durante el arranque.
+<img width="700" height="500" alt="Captura de pantalla 2025-10-19 115501" src="https://github.com/user-attachments/assets/2532abe7-0f79-424b-a142-475b949a1554" />
 
-Estructura del fichero
+***Se recomienda no usar -d para ver los logs en tiempo real y detectar errores durante el arranque.***
 
-services: Define los tres contenedores necesarios.
-image: Es la imagen oficial usada por cada servicio.
-environment: Configura las credenciales y parámetros de conexión.
-ports: Conecta los servicios con el navegador mediante puertos locales.
-volumes: Garantiza la persistencia de datos aunque se borren los contenedores.
-depends_on: Establece el orden de arranque entre servicios.
-container_name: Facilita la identificación de cada contenedor.
+
+**Estructura del fichero**
+
+services: Define los tres contenedores necesarios.  
+image: Es la imagen oficial usada por cada servicio.  
+environment: Configura las credenciales y parámetros de conexión.  
+ports: Conecta los servicios con el navegador mediante puertos locales.  
+volumes: Garantiza la persistencia de datos aunque se borren los contenedores.  
+depends_on: Establece el orden de arranque entre servicios.  
+container_name: Facilita la identificación de cada contenedor.  
 
 PrestaShop — Asistente de instalación
 Al acceder por primera vez a http://localhost:8080, aparece el asistente de instalación a lo cual:
-crearemos una cuenta hasta que nos aparezca la pantalla de bienvenida.
+crearemos una cuenta hasta que nos aparezca la pantalla de bienvenida. 
 
 PrestaShop — Configuración de base de datos
 Se introducen los siguientes datos:
 
-Servidor: prestashop-db
-Base de datos: prestashop
-Usuario: prestashop
-Contraseña: hola123Piero
+`Servidor`: prestashop-db  
+`Base de datos`: prestashop  
+`Usuario`: prestashop  
+`Contraseña`: hola123Piero  
+
+<img width="1296" height="1128" alt="Captura de pantalla 2025-10-19 120330" src="https://github.com/user-attachments/assets/7db1c21d-d1d5-4ff5-ae54-6bca5d6abf68" />
 
 PrestaShop — Panel de administración
-Una vez completada la instalación, se accede al backend desde el enlace generado (ej. http://localhost:8080/Piero123):
+Una vez completada la instalación, se accede al backend desde el enlace generado:  
+
 
 PrestaShop — Vista de la tienda
 La tienda está disponible en http://localhost:8080:
+
+<img width="1492" height="839" alt="image" src="https://github.com/user-attachments/assets/5b42bc6c-7ea6-406a-8f1e-37477b2c7125" />
+
 
 
 phpMyAdmin — Tablas de la base de datos
@@ -111,13 +125,5 @@ Contraseña: hola123Piero
 
 Dentro de la base de datos prestashop, se visualizan las tablas creadas (ps_cart, ps_customer, ps_orders, etc.).
 
-
 <img width="1181" height="930" alt="Captura de pantalla 2025-10-19 115211" src="https://github.com/user-attachments/assets/aed9f8cf-2ac8-4ade-a270-a6052d33ad82" />
-<img width="1276" height="908" alt="Captura de pantalla 2025-10-19 115158" src="https://github.com/user-attachments/assets/e4426b06-2c3c-488a-ae5d-9a18746d003c" />
-<img width="492" height="462" alt="Captura de pantalla 2025-10-19 124101" src="https://github.com/user-attachments/assets/26f555e2-5561-43a4-bc25-3abe6da18872" />
-<img width="1479" height="927" alt="Captura de pantalla 2025-10-19 124005" src="https://github.com/user-attachments/assets/823bbece-c51b-4c75-9982-20deb88989ab" />
-<img width="1200" height="623" alt="Captura de pantalla 2025-10-19 123910" src="https://github.com/user-attachments/assets/b40c0e0a-05be-4585-966e-5936ef296a32" />
 <img width="1635" height="1100" alt="Captura de pantalla 2025-10-19 121132" src="https://github.com/user-attachments/assets/37295ea9-de10-43c6-9a2a-fdb23c26e2ce" />
-<img width="1648" height="1115" alt="Captura de pantalla 2025-10-19 120732" src="https://github.com/user-attachments/assets/b03d8cc7-ca9b-44f2-b6d9-f7dbcb10c799" />
-<img width="1296" height="1128" alt="Captura de pantalla 2025-10-19 120330" src="https://github.com/user-attachments/assets/7db1c21d-d1d5-4ff5-ae54-6bca5d6abf68" />
-<img width="1634" height="1127" alt="Captura de pantalla 2025-10-19 115501" src="https://github.com/user-attachments/assets/8b831267-d04d-4381-90ad-9f835fca2748" />
