@@ -86,38 +86,27 @@ container_name: Facilita la identificación de cada contenedor.
 
 PrestaShop — Asistente de instalación
 Al acceder por primera vez a http://localhost:8080, aparece el asistente de instalación a lo cual:
-
-
- pantalla de bienvenida del instalador
+crearemos una cuenta hasta que nos aparezca la pantalla de bienvenida.
 
 PrestaShop — Configuración de base de datos
 Se introducen los siguientes datos:
 
 Servidor: prestashop-db
-
 Base de datos: prestashop
-
 Usuario: prestashop
-
 Contraseña: hola123Piero
 
- pantalla de conexión exitosa a la base de datos
-
 PrestaShop — Panel de administración
-Una vez completada la instalación, se accede al backend desde el enlace generado (ej. http://localhost:8080/admin123):
-
-vista del panel de administración
+Una vez completada la instalación, se accede al backend desde el enlace generado (ej. http://localhost:8080/Piero123):
 
 PrestaShop — Vista de la tienda
 La tienda está disponible en http://localhost:8080:
 
- vista del frontend con productos de ejemplo
 
 phpMyAdmin — Tablas de la base de datos
 Se accede a http://localhost:8081 con:
 
 Usuario: root
-
 Contraseña: hola123Piero
 
 Dentro de la base de datos prestashop, se visualizan las tablas creadas (ps_cart, ps_customer, ps_orders, etc.).
